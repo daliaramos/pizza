@@ -22,14 +22,16 @@ Pizza.prototype.cost = function(){
   } else {
     cost = 30;
   }
-if (this.toppings === "")
-  return cost
+if (this.toppings === "cheese" || this.toppings === "peperoni" || this.toppings === "artichoke"|| this.toppings === "anchovy"){
+    cost = cost + 1
+}
+  return cost;
 }
 $(document).ready(function(){
   $("#pizza").submit(function(event){
     event.preventDefault();
     var answer = chosenPizza();
 
-    $("#result").text("your total cost is" + answer.cost());
+    $("#result").text("your total cost is " + answer.cost());
   });
 });
