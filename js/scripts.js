@@ -15,4 +15,9 @@ function pizzaCost() {
 
 Pizza.prototype.Cost = function(){
   var cost =0;
- if (this.size === "small" || this.size === "medium"){
+ if (this.size === "small" || this.toppings === "cheese" || this.toppings === "peperoni"){
+  cost = 10;
+  }
+
+  if (this.size === "medium" ||this.size === "large" ||this.size === "extraLarge" ||this.toppings === "artichoke" || this.toppings === "anchovy"){
+  cost = 30;
