@@ -4,7 +4,7 @@ function Pizza(size, toppings) {
 
 }
 
-function pizzaCost() {
+function chosenPizza() {
   var size = $("#size").val();
   var toppings = $("#toppings").val();
   var newCost = new Pizza(size, toppings);
@@ -13,11 +13,23 @@ function pizzaCost() {
 }
 
 
-Pizza.prototype.Cost = function(){
+Pizza.prototype.cost = function(){
   var cost =0;
- if (this.size === "small" || this.toppings === "cheese" || this.toppings === "peperoni"){
+ if (this.size === "small"){
   cost = 10;
+  } else if (this.size === "medium"){
+    cost = 20;
+  } else {
+    cost = 30;
   }
+if (this.toppings === "")
+  return cost
+}
+$(document).ready(function(){
+  $("#pizza").submit(function(event){
+    event.preventDefault();
+    var answer = chosenPizza();
 
-  if (this.size === "medium" ||this.size === "large" ||this.size === "extraLarge" ||this.toppings === "artichoke" || this.toppings === "anchovy"){
-  cost = 30;
+    $("#result").text("your total cost is" + answer.cost());
+  });
+});

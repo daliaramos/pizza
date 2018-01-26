@@ -13,24 +13,26 @@
       <form id="pizza">
         <div class="col-md-6">
 
+        <select class="form-control" id="size">
+          <option>small</option>
+          <option>medium</option>
+          <option>large</option>
+          <option>extra large</option>
+        </select>
+        <br>
         <select class="form-control" id="toppings">
           <option>cheese</option>
           <option>peperoni</option>
           <option>artichoke</option>
           <option>anchovy</option>
         </select>
-        <br>
-        <select class="form-control" id="size">
-          <option value="small">small</option>
-          <option value="medium">medium</option>
-          <option value="large">large</option>
-          <option value="extraLarge">extra large</option>
-        </select>
       </div>
       <br>
       <button type="submit" name="button">submit</button>
+
+        <span id="result"></span>
     </form>
-      <span id="cost"></span>
+
 
     </div>
 
