@@ -19,8 +19,10 @@ Pizza.prototype.cost = function(){
   cost = 10;
   } else if (this.size === "medium"){
     cost = 20;
-  } else {
+  } else if (this.size === "large"){
     cost = 30;
+  } else {
+    cost = 35;
   }
 if (this.toppings === "cheese" || this.toppings === "peperoni" || this.toppings === "artichoke"|| this.toppings === "anchovy"){
     cost = cost + 1
