@@ -3,10 +3,31 @@ function Pizza(){
   this.totalScore[];//gives them their total cost
 }
 //add the pizza sizes and toppings and push it to the add array.
-Pizza.prototype.Select
+Pizza.prototype.Select = function(){
+    var toppingPrices = 
+
+
+
+
+}
 
 
 
 
 //give the user the total cost
 Pizza.prototype.cost
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//front-end logic
